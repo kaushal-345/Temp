@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkedin</title>
+    <style>
+        .container{
+            height:100%;
+            background-color: aliceblue;
+            position: fixed;
+            overflow: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+        .centering{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: x-large;
+            color: black;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .logo img{
+            max-width: 200px;
+            padding: 20px;
+        }
+        .box{
+
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="container">
+            <div class="logo">
+                <img src="images/linkedin logo.png">
+            </div>
+            <div class="centering">
+                <div class="box">
+                    <h1>Sign in</h1>
+                    <p>Stay updated o your professional world.</p>
+                    <div class="inputs">
+                        <input type="text" placeholder="Email or Phone" required><br>
+                        <input type="password" placeholder="Password" required><br>
+                    </div>
+                    <div><a href="#">Forgot password?</a></div><br>
+                    <input type="checkbox">Remember me
+                    
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(){
+            let scr=document.getElementById("name").value
+            //msg.innerHTML=scr
+            //alert(scr)
+            if(scr>100){msg.innerHTML="invalid"}
+            else if(scr>90){msg.innerHTML="Grade A"}
+            else if(scr>70){msg.innerHTML="Grade B"}
+            else if(scr>40){msg.innerHTML="Grade C"}
+            else if(scr<40){msg.innerHTML="Grade F"}
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="name">
+    <button onclick="f1()">Submit</button>
+    <hr>
+    <div id="msg"></div>
+</body>
+</html>

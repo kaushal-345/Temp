@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(){
+            //e.preventDefault()
+            let e=document.getElementById("email").value
+            let p=document.getElementById("pass").value
+            if(e=="" || p==""){msg.innerHTML="mandatory"}
+            else if(e=="john@gmail.com" && p=="1234"){
+                msg.innerHTML="Successful"
+            }else{msg.innerHTML="Denied"}
+        }
+    </script>
+    <style>
+        .center{
+            text-align: center;
+            display:flex;
+            justify-content: center;
+            
+        }
+        .box{
+            border:2px solid silver;
+            padding: 20px;
+            width:400px;
+            border-radius: 20px;
+        }
+        input{
+            padding: 20px;
+            width: 90%;
+        }
+        button{
+            width: 100%;
+            background-color: blue;
+            border-radius: 10px;
+            color: aliceblue;
+            font-size: xx-large;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="box">
+        <h4><i>Login Form</i></h4>
+        <form>
+        <div id="msg"></div>
+                <input type="text" required placeholder="Enter Email" id="email" autofocus><br><br>
+                <input type="password" required placeholder="Enter password" id="pass"><br><br>
+            <button onclick="f1()">Login</button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //let name= "John"
+        //document.write(`My name is ${name}`)
+        function f1(){
+            let name=document.getElementById("t1").value
+            let age=Number(document.getElementById("n2").value)
+            let qualification=document.getElementById("t3").value
+            let place=document.getElementById("t4").value
+            msg.innerHTML=
+                name+" "+"|"+" "+age+" "+"|"+" "+qualification+" "+"|"+" "+place
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h4>Calculator</h4>
+        <input type="text" id="t1"><br><br>
+        <input type="number" id="n2"><br><br>
+        <input type="text" id="t3"><br><br>
+        <input type="text" id="t4"><br><br>
+        <button onclick="f1()">Submit</button><br><br>
+        <div id="msg"></div>
+    </div>
+</body>
+</html>

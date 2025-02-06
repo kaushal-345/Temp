@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script>
+        function showData(){
+            let email=document.getElementById("email").value
+            let password=document.getElementById("pass").value
+            msg.innerHTML = `${email}, ${password}`
+        }
+    </script>
+    <style>
+        .box{
+            border: 2px solid brown;
+            padding: 10px;
+            border-radius: 5px;
+            width: 400px;
+        }
+        .center{
+            text-align: center;  
+            display:flex;
+            justify-content: center;  
+            margin-top: 80px;
+        }
+        input{
+            width: 90%;
+            padding: 20px;
+            border: 1px solid black;
+        }
+        button{
+            width: 50%;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            /* text-align: left; */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="box">
+            <h4 style="text-align: left;">Login form</h4>
+                <input type="text" required placeholder="Enter Email" id="email" autofocus><br><br>
+                <input type="password" required placeholder="Enter password" id="pass"><br><br>
+                <button onclick="showData()">Login</button><br><br>
+                <div id="msg"></div>
+        </div>
+    </div>
+</body>
+</html>

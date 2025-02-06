@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp2-Forms</title>
+    <style>
+        .centering{
+            margin-left: 350px;
+            margin-right: 350px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: x-large;
+        }
+        .margin{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="centering">
+        <!-- <h1>Temp 2</h1> -->
+        <!-- <h2>Forms</h2> -->
+        <h4><i>Login Form</i></h4>
+        <form>
+                <!-- <input type="text" required value="John" readonly> -->
+                <!-- <input type="text" required value="John" disabled>         -->
+                <!-- <input type="text" required value="John" maxlength="10" size="5"> -->
+                <input type="text" required placeholder="Enter Email" autofocus><br>
+                <input type="password" required placeholder="Enter password"><br><br>
+                <input type="checkbox" id="chkRemember"><label for="chkRemember">Remember me</label><br>
+            <button>Submit</button>
+        </form>
+    </div>
+        <div class="margin"><hr></div>
+    <div class="centering">
+        <h4><i>Signup Form</i></h4>
+        <form>
+            <fieldset>
+                <legend>Personal Information:</legend>
+                <input type="text" placeholder="Enter Name" required><br>
+                <input type="text" placeholder="Enter Email"><br>
+                <input type="number" placeholder="Enter Age"><br>
+                <p>
+                    State:<br>
+                    <select multiple>
+                        <option>Telangana</option>
+                        <option>Andra Pradesh</option>
+                        <option>Kerala</option>
+                    </select>
+                </p>
+            </fieldset><br>
+            <fieldset>
+                <legend>Educational Information:</legend>
+                <p>
+                    Skills:<br>
+                    <input type="checkbox"><label>HTML</label><br>
+                    <input type="checkbox"><label>CSS</label><br>
+                    <input type="checkbox"><label>Javascript</label><br>
+                </p>
+                <p>
+                Qualification:<br>
+                    <input type="radio" name="Qualification"><label>BE</label><br>
+                    <input type="radio" name="Qualification"><label>BTech</label><br>
+                </p>
+            </fieldset><br>
+            
+            <button>Submit</button>
+            <!-- <input type="submit"> -->
+            <!-- <input type="image" src="assets/images/ball.png"> -->
+            <!-- <input type="button" value="Submit"> -->
+            <input type="reset">
+        </form>
+    </div>
+</body>
+</html>
