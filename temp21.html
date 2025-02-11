@@ -7,6 +7,37 @@
     <title>Registration Form</title>
     <script>
         let users=[]
+
+        function showLogin(){
+            root.innerHTML=`
+            <h1>Login Form</h1>
+            <div class="center">
+        <div class="box">
+           
+            <h4 style="text-align: left;">Login form</h4>
+            <p> <div id="data"></div></p>
+                <input type="text" required placeholder="Enter Email" id="email" autofocus><br><br>
+                <input type="password" required placeholder="Enter password" id="pass"><br><br>
+                <button onclick='chkUser()'>Login</button><br><br>
+        </div>
+    </div>`
+        }
+        
+        function showForm(){
+        root.innerHTML=`<div class="center">
+        <div class="box">
+            <h4>Registration Form</h4>
+            <input type="text" required placeholder="Enter name" id="name" autofocus><br><br>
+            <input type="email" required placeholder="Enter email" id="email"><br><br>
+            <input type="password" required placeholder="Enter password" id="pass"><br><br>
+            <input type="date" required placeholder="Enter dob" id="dob"><br><br>
+            <button onclick='addUser()'>Register</button><br><br>
+            <div id="msg"></div>
+        </div>
+    </div>` 
+        }
+
+
         function deleteUser(index){
             users.splice(index,1)
             showUsers()
@@ -19,7 +50,7 @@
                     ${users[i].name}<br>
                     ${users[i].email}<br>
                     ${users[i].password}<br>
-                    ${users[i].dob}
+                    ${users[i].dob}<br>
                     <button onclick='deleteUser(${i})'>Delete</button><br><br>
                     </div>`
             }
@@ -38,6 +69,22 @@
             }
             users.push(user)
             showUsers()
+            showLogin()
+        }
+
+        function chkUser(){
+            let e=document.getElementById("email").value
+            let p=document.getElementById("pass").value
+            if(e=="" || p==""){data.innerHTML="mandatory"
+                return
+            }
+            for(let i=0;i<users.length;i++){
+            if(users[i].email==e && users[i].password==p){
+                data.innerHTML= `Welcome ${users[i].name}`
+                return
+            }
+        }
+        data.innerHTML=`Access denied`
         }
     </script>
     <style>
@@ -67,8 +114,9 @@
         }
     </style>
 </head>
-<body>
-    <div class="center">
+<body onload="showForm()">
+    <div id="root"></div>
+    <!-- <div class="center">
         <div class="box">
             <h4>Registration Form</h4>
             <input type="text" required placeholder="Enter name" id="name" autofocus><br><br>
@@ -78,6 +126,6 @@
             <button onclick="addUser()">Register</button><br><br>
             <div id="msg"></div>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>
