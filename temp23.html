@@ -28,6 +28,7 @@
 
       const decrement = (id) =>{
         cart[id]=cart[id] -1
+        cart[id] < 1 && delete cart[id]
         console.log(cart)
         showCart()
       }
@@ -56,7 +57,9 @@
           // return sum
           return sum + value.price * (cart[value.id]?cart[value.id]:0)
         },0);
-        console.log(total)     
+        let count = Object.keys(cart).length
+        items.innerHTML=count
+        // console.log(total)     
         divTotal.innerHTML=`Order Value: $${total}`
       } 
 
@@ -74,6 +77,7 @@
   </head>
   <body onload="showProducts()">
     <h1>My Store</h1>
+    <h4>Cart:<span id="items"></span></h4>
     <hr />
     <h3>Products</h3>
     <div id="divProducts"></div>
