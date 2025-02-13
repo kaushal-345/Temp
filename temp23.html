@@ -47,7 +47,19 @@
           }
         });
         divCart.innerHTML = str;
+        showTotal()
       };
+
+      const showTotal = () =>{
+        let total=products.reduce((sum,value) => {
+          // if(cart[value.id]){ return sum + value.price * cart[value.id] }
+          // return sum
+          return sum + value.price * (cart[value.id]?cart[value.id]:0)
+        },0);
+        console.log(total)     
+        divTotal.innerHTML=`Order Value: $${total}`
+      } 
+
       const showProducts = () => {
         let str = "";
         products.map((value) => {
@@ -57,6 +69,7 @@
         });
         divProducts.innerHTML = str;
       };
+
     </script>
   </head>
   <body onload="showProducts()">
@@ -66,5 +79,6 @@
     <div id="divProducts"></div>
     <h3>My Cart</h3>
     <div id="divCart"></div>
+    <div id="divTotal"></div>
   </body>
 </html>
