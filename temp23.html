@@ -73,16 +73,28 @@
         divProducts.innerHTML = str;
       };
 
+      const displayCart = () => {
+        divCartBlock.style.display="block"
+      }
+
+      const hideCart = () => {
+        divCartBlock.style.display="none"
+      }
+
     </script>
   </head>
   <body onload="showProducts()">
     <h1>My Store</h1>
-    <h4>Cart:<span id="items"></span></h4>
+    <button onclick="displayCart()"><h4>Cart:<span id="items"></span></h4></button>
     <hr />
     <h3>Products</h3>
     <div id="divProducts"></div>
-    <h3>My Cart</h3>
-    <div id="divCart"></div>
-    <div id="divTotal"></div>
+
+    <div id="divCartBlock" style="display: none;">
+      <h3>My Cart</h3>
+      <div id="divCart"></div>
+      <div id="divTotal"></div>
+      <button onclick="hideCart()">Close</button>
+    </div>
   </body>
 </html>
