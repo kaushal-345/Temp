@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let doj = new Date()
+        // document.write(doj)
+        //document.write(doj.getDate())
+        // document.write(doj.getFullYear())
+        // document.write(doj.getDay())
+
+        function getDate(){
+            let a=new Date(document.getElementById("doj").value);
+            if(a.getDay()==3) msg.innerHTML="Not allowed"
+            else msg.innerHTML="Welcome"
+        }
+    </script>
+    <input type="date" id="doj">
+    <button onclick="getDate()">Submit</button>
+    <div id="msg"></div>
+</body>
+</html>
