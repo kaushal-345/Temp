@@ -6,8 +6,16 @@
     <title>Login Page</title>
     <script>
         function showData(){
-            let email=document.getElementById("email").value
-            let password=document.getElementById("pass").value
+            // let email=document.getElementById("email").value
+            // let email=document.querySelector("#email").value
+            // let email=document.querySelector(".c").value
+            // let email=document.getElementsByClassName("c").value
+            // let email=document.querySelector("input").value
+            // let email=document.querySelectorAll("input")
+            // let email=document.getElementsByTagName("input")
+            // console.log(email[1].value)
+            let email=document.querySelector("#email").value
+            let password=document.querySelector("#pass").value
             msg.innerHTML = `${email}, ${password}`
         }
     </script>
@@ -36,6 +44,9 @@
             padding: 5px;
             /* text-align: left; */
         }
+        .c{
+            background-color: aqua;
+        }
 
     </style>
 </head>
@@ -43,7 +54,7 @@
     <div class="center">
         <div class="box">
             <h4 style="text-align: left;">Login form</h4>
-                <input type="text" required placeholder="Enter Email" id="email" autofocus><br><br>
+                <input type="text" required placeholder="Enter Email" id="email" class="c" autofocus><br><br>
                 <input type="password" required placeholder="Enter password" id="pass"><br><br>
                 <button onclick="showData()">Login</button><br><br>
                 <div id="msg"></div>
